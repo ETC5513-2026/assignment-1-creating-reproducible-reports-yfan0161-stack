@@ -53,3 +53,12 @@ data_clean %>%
   summary() %>%
   kable()
 ```
+
+```{r}
+#| label: fig-purchaseplot
+#| fig-cap: "Distribution of customer purchase amounts."
+#| echo: false
+ggplot(data_clean, aes(x = purchase_amount)) +
+  geom_histogram(fill = "steelblue", color = "white", bins = 15) +
+  labs(x = "Purchase Amount (USD)", y = "Number of Customers")
+```
