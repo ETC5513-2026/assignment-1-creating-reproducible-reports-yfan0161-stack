@@ -20,3 +20,6 @@ library(readr)
 
 # Introduction
 This report looks at customer data to understand shopping patterns.I want to see how visits and spending relate to how much customers buy.This can help make marketing decisions more effective.The findings will help explain what affects customer purchases.
+
+# Research Question
+I want to find out what affects how much customers spend on purchases.I will look at the number of visits and marketing spend for each customer.This report will show the relationship between these factors and purchase amount.
