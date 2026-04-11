@@ -41,10 +41,12 @@ data_clean <- data %>%
 
 ## Dataset Description subsection
 Dataset Description
-This dataset has r nrow(data_clean) observations and r ncol(data_clean) variables.The data includes numeric values like visits and purchase amount, and categorical groups like customer segment.The summaries below show the general patterns in customer behavior.
+This dataset has `r nrow(data_clean)` observations and `r ncol(data_clean)` variables.
+The data includes numeric values like visits and purchase amount, and categorical groups like customer segment.
+Table \@ref(tbl-data-cleaning) shows the summary statistics for key numeric variables, and Figure \@ref(fig-purchaseplot) displays the distribution of purchase amounts.
 
 ```{r}
-#| label: data-cleaning
+#| label: tbl-data-cleaning
 #| tbl-cap: "Summary of the dataset"
 #| echo: false
 

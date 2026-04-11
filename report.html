@@ -88,11 +88,16 @@ ul.task-list li input[type="checkbox"] {
 <p>This dataset tracks customer behavior for an online store.It records each customer’s marketing spend, site visits, and total purchase amount.It also includes customer segment information to group different types of shoppers.Before analysis, I removed rows with missing values and fixed inconsistent entries.This cleaned data ensures reliable results for the analysis.</p>
 <section id="dataset-description-subsection" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-description-subsection">Dataset Description subsection</h2>
-<p>Dataset Description This dataset has r nrow(data_clean) observations and r ncol(data_clean) variables.The data includes numeric values like visits and purchase amount, and categorical groups like customer segment.The summaries below show the general patterns in customer behavior.</p>
-<div class="cell" data-tbl-cap="Summary of the dataset">
+<p>Dataset Description This dataset has 45 observations and 7 variables. The data includes numeric values like visits and purchase amount, and categorical groups like customer segment. Table @ref(tbl-data-cleaning) shows the summary statistics for key numeric variables, and Figure @ref(fig-purchaseplot) displays the distribution of purchase amounts.</p>
+<div class="cell">
+<div id="tbl-data-cleaning" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-cleaning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of the dataset
+</figcaption>
+<div aria-describedby="tbl-data-cleaning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Summary of the dataset</caption>
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -140,6 +145,9 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</figure>
 </div>
 </div>
 <div class="cell">
