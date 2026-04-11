@@ -17,3 +17,6 @@ library(tidyverse)
 library(knitr)
 library(readr)
 ```
+
+# Introduction
+This report looks at customer data to understand shopping patterns.I want to see how visits and spending relate to how much customers buy.This can help make marketing decisions more effective.The findings will help explain what affects customer purchases.
