@@ -64,3 +64,14 @@ ggplot(data_clean, aes(x = purchase_amount)) +
   geom_histogram(fill = "steelblue", color = "white", bins = 15) +
   labs(x = "Purchase Amount (USD)", y = "Number of Customers")
 ```
+
+## Results
+
+This section looks at the core research question: *What is the relationship between marketing spend and customer purchase amount?*
+
+As you can see in Figure \@ref(fig-marketing-purchase), there’s a clear positive trend between marketing spend and the amount customers spend. This means when customers are exposed to higher marketing spend, they generally tend to spend more money.
+
+Meanwhile, Figure \@ref(fig-purchase-distribution) shows how customer purchases are distributed overall. Most customers fall into the lower to middle spending range, but there are a few customers who spend very high amounts.
+
+Putting these visuals together, it’s clear that increased marketing spending is linked to higher customer purchases, which directly answers our research question. To give a specific number, the average purchase amount across all customers is `r round(mean(data_clean$purchase_amount), 2)` USD, which matches the patterns we see in the figures quite well.
+
