@@ -16,6 +16,7 @@ format:
 library(tidyverse)
 library(knitr)
 library(readr)
+library(dplyr)
 ```
 
 # Introduction
@@ -23,3 +24,17 @@ This report looks at customer data to understand shopping patterns.I want to see
 
 # Research Question
 I want to find out what affects how much customers spend on purchases.I will look at the number of visits and marketing spend for each customer.This report will show the relationship between these factors and purchase amount.
+
+# Dataset Introduction
+This dataset tracks customer behavior for an online store.It records each customer's marketing spend, site visits, and total purchase amount.It also includes customer segment information to group different types of shoppers.Before analysis, I removed rows with missing values and fixed inconsistent entries.This cleaned data ensures reliable results for the analysis.
+
+```{r}
+#| echo: false
+#| include: false
+
+data <- read_csv("data/35036281_Yunhui Fan.csv")
+data_clean <- data %>%
+  drop_na() %>% 
+  filter(purchase_amount >= 0)
+```
+
