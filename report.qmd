@@ -29,6 +29,7 @@ I want to find out what affects how much customers spend on purchases.I will loo
 This dataset tracks customer behavior for an online store.It records each customer's marketing spend, site visits, and total purchase amount.It also includes customer segment information to group different types of shoppers.Before analysis, I removed rows with missing values and fixed inconsistent entries.This cleaned data ensures reliable results for the analysis.
 
 ```{r}
+#| label: data-loading
 #| echo: false
 #| include: false
 
@@ -41,3 +42,14 @@ data_clean <- data %>%
 ## Dataset Description subsection
 Dataset Description
 This dataset has r nrow(data_clean) observations and r ncol(data_clean) variables.The data includes numeric values like visits and purchase amount, and categorical groups like customer segment.The summaries below show the general patterns in customer behavior.
+
+```{r}
+#| label: data-cleaning
+#| tbl-cap: "Summary of the dataset"
+#| echo: false
+
+data_clean %>%
+  select(visits, marketing_spend, purchase_amount) %>%
+  summary() %>%
+  kable()
+```
