@@ -38,3 +38,6 @@ data_clean <- data %>%
   filter(purchase_amount >= 0)
 ```
 
+## Dataset Description subsection
+Dataset Description
+This dataset has r nrow(data_clean) observations and r ncol(data_clean) variables.The data includes numeric values like visits and purchase amount, and categorical groups like customer segment.The summaries below show the general patterns in customer behavior.
