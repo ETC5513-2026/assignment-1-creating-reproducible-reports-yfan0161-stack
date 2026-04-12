@@ -167,10 +167,42 @@ Figure&nbsp;1: Distribution of customer purchase amounts.
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>This section looks at the core research question: <em>What is the relationship between marketing spend and customer purchase amount?</em></p>
-<p>As you can see in Figure @ref(fig-marketing-purchase), there’s a clear positive trend between marketing spend and the amount customers spend. This means when customers are exposed to higher marketing spend, they generally tend to spend more money.</p>
-<p>Meanwhile, Figure @ref(fig-purchase-distribution) shows how customer purchases are distributed overall. Most customers fall into the lower to middle spending range, but there are a few customers who spend very high amounts.</p>
-<p>Putting these visuals together, it’s clear that increased marketing spending is linked to higher customer purchases, which directly answers our research question. To give a specific number, the average purchase amount across all customers is 166.7 USD, which matches the patterns we see in the figures quite well.</p>
+<p>This section looks at our research question: What factors influence customer purchase amounts?</p>
+<p>As shown in Figure @ref(fig-purchaseplot), most customers have relatively low purchase amounts. The distribution is right-skewed, meaning only a few customers spend very high amounts. The average purchase amount in this data is 166.7 USD.</p>
+<p>Figure @ref(fig-total-visits) shows the distribution of customer visit counts. This bar chart helps us understand how often customers engage with the business, and we can see the most common number of visits clearly.</p>
+<p>These two figures show different aspects of customer behavior, which together help us understand purchase patterns and answer our research question.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-marketing-purchase" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-marketing-purchase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="report_files/figure-html/fig-marketing-purchase-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-marketing-purchase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Marketing spend vs customer purchase amount
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-total-visits" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-total-visits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="report_files/figure-html/fig-total-visits-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-total-visits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Distribution of customer visit frequencies
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Conclusion The analysis shows that marketing spend has a clear positive relationship with customer purchase amounts. Higher marketing investment is associated with increased customer spending. The distribution of purchases also shows most customers spend moderately, with some high-value customers.</p>
 </section>
 </section>
 
