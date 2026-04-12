@@ -74,12 +74,14 @@ ggplot(data_clean, aes(x = purchase_amount)) +
 ## Results
 
 This section looks at our research question: What factors influence customer purchase amounts?
-
-As shown in Figure @fig-purchaseplot, most customers have relatively low purchase amounts. The distribution is right-skewed, meaning only a few customers spend very high amounts. The average purchase amount in this data is `r round(mean(data_clean$purchase_amount), 2)` USD.
-
-Figure @fig-total-visits shows the distribution of customer visit counts. This bar chart helps us understand how often customers engage with the business, and we can see the most common number of visits clearly.
-
-These two figures show different aspects of customer behavior, which together help us understand purchase patterns and answer our research question.
+As shown in Figure @fig-purchaseplot, most customers have relatively low purchase amounts. 
+The distribution is right-skewed, meaning only a few customers spend very high amounts. 
+The average purchase amount in this data is `r round(mean(data_clean$purchase_amount), 2)` USD.
+Figure @fig-marketing-purchase shows a clear positive relationship between marketing spend and purchase amount. 
+As marketing spend increases, customer purchase amounts tend to increase as well, showing a strong connection between marketing investment and customer spending.
+Figure @fig-total-visits shows the distribution of customer visit counts. 
+This bar chart helps us understand how often customers engage with the business, and we can see the most common number of visits clearly.
+Together, these figures show that marketing spend and customer engagement both play important roles in influencing how much customers spend, which directly answers our research question.
 
 
 ```{r}
@@ -111,4 +113,7 @@ ggplot(data_clean, aes(x = visits)) +
 ```
 
 Conclusion
-The analysis shows that marketing spend has a clear positive relationship with customer purchase amounts. Higher marketing investment is associated with increased customer spending. The distribution of purchases also shows most customers spend moderately, with some high-value customers.
+The analysis shows clear relationships between marketing spend, customer visits, and purchase amounts. Higher marketing spending is strongly associated with increased customer purchase amounts, demonstrating the effectiveness of marketing investment.
+The distribution of purchase amounts indicates that most customers spend moderately, while a small group of high-value customers exists.
+Visit patterns also show that general customer engagement is relatively consistent across the dataset.Overall, the findings support the idea that marketing efforts and customer engagement are key factors influencing customer spending behavior.
+These insights can help guide future marketing strategies and improve business decisions.
