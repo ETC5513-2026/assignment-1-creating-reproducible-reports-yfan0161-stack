@@ -2,8 +2,14 @@
 title: "Dataset Analysis Report"
 author: "Yunhui Fan"
 format:
-  html: default
-  pdf: default
+  html:
+    number-sections: true
+    number-tables: true
+    number-figures: true
+  pdf:
+    number-sections: true
+    number-tables: true
+    number-figures: true
 ---
 
 # Load Libraries
@@ -43,7 +49,7 @@ data_clean <- data %>%
 Dataset Description
 This dataset has `r nrow(data_clean)` observations and `r ncol(data_clean)` variables.
 The data includes numeric values like visits and purchase amount, and categorical groups like customer segment.
-Table \@ref(tbl-data-cleaning) shows the summary statistics for key numeric variables, and Figure \@ref(fig-purchaseplot) displays the distribution of purchase amounts.
+Table @tbl-data-cleaning shows the summary statistics for key numeric variables, and Figure @fig-purchaseplot displays the distribution of purchase amounts.
 
 ```{r}
 #| label: tbl-data-cleaning
@@ -69,9 +75,9 @@ ggplot(data_clean, aes(x = purchase_amount)) +
 
 This section looks at our research question: What factors influence customer purchase amounts?
 
-As shown in Figure \@ref(fig-purchaseplot), most customers have relatively low purchase amounts. The distribution is right-skewed, meaning only a few customers spend very high amounts. The average purchase amount in this data is `r round(mean(data_clean$purchase_amount), 2)` USD.
+As shown in Figure @fig-purchaseplot, most customers have relatively low purchase amounts. The distribution is right-skewed, meaning only a few customers spend very high amounts. The average purchase amount in this data is `r round(mean(data_clean$purchase_amount), 2)` USD.
 
-Figure \@ref(fig-total-visits) shows the distribution of customer visit counts. This bar chart helps us understand how often customers engage with the business, and we can see the most common number of visits clearly.
+Figure @fig-total-visits shows the distribution of customer visit counts. This bar chart helps us understand how often customers engage with the business, and we can see the most common number of visits clearly.
 
 These two figures show different aspects of customer behavior, which together help us understand purchase patterns and answer our research question.
 
