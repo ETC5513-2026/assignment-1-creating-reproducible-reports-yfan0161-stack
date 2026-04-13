@@ -52,7 +52,7 @@ data_clean <- data %>%
 ```
 
 ## Dataset Description subsection
-The cleaned dataset contains r nrow(data_clean) observations and r ncol(data_clean) variables.
+The cleaned dataset contains `r nrow(data_clean)` observations and `r ncol(data_clean)` variables.
 Numeric variables include marketing spend, visits, and purchase amount, while customer segment is categorical.
 Table @tbl-data-cleaning summarises the key numeric variables, and Figure @fig-purchaseplot shows the overall distribution of purchase amounts.
 
@@ -83,7 +83,7 @@ From Table @tbl-data-cleaning, we can see the central tendency and spread of mar
 As shown in Figure @fig-purchaseplot, most customers exhibit relatively moderate purchase values.
 Figure @fig-marketing-purchase illustrates the relationship between marketing spend and purchase amount.
 A clear positive trend is visible, indicating that increased marketing spend per customer is associated with higher purchase amounts.
-The average purchase amount in the sample is r round(mean(data_clean$purchase_amount), 2) USD.
+The average purchase amount in the sample is `r round(mean(data_clean$purchase_amount), 2)` USD.
 Together, Table @tbl-data-cleaning, Figure @fig-purchaseplot, and Figure @fig-marketing-purchase confirm that higher marketing investment per customer corresponds to greater customer spending.
 This directly answers the research question with consistent visual and statistical evidence.
 ```{r}
