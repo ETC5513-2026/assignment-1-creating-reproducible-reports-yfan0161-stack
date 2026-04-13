@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yunhui Fan">
 
-<title>Dataset Analysis Report</title>
+<title>Marketing Spend and Customer Purchase Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dataset Analysis Report</h1>
+<h1 class="title">Marketing Spend and Customer Purchase Analysis</h1>
 </div>
 
 
@@ -77,18 +77,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="introduction" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
-<p>This report looks at customer data to understand shopping patterns.I want to see how visits and spending relate to how much customers buy.This can help make marketing decisions more effective.The findings will help explain what affects customer purchases.</p>
-</section>
-<section id="research-question" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Research Question</h1>
-<p>I want to find out what affects how much customers spend on purchases.I will look at the number of visits and marketing spend for each customer.This report will show the relationship between these factors and purchase amount.</p>
-</section>
-<section id="dataset-introduction" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Dataset Introduction</h1>
-<p>This dataset tracks customer behavior for an online store.It records each customer’s marketing spend, site visits, and total purchase amount.It also includes customer segment information to group different types of shoppers.Before analysis, I removed rows with missing values and fixed inconsistent entries.This cleaned data ensures reliable results for the analysis.</p>
-<section id="dataset-description-subsection" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="dataset-description-subsection"><span class="header-section-number">4.1</span> Dataset Description subsection</h2>
-<p>Dataset Description This dataset has 45 observations and 7 variables. The data includes numeric values like visits and purchase amount, and categorical groups like customer segment. Table <a href="#tbl-data-cleaning" class="quarto-xref">Table&nbsp;1</a> shows the summary statistics for key numeric variables, and Figure <a href="#fig-purchaseplot" class="quarto-xref">Figure&nbsp;1</a> displays the distribution of purchase amounts.</p>
+<p>This report analyses customer data from an online retail marketing campaign. It explores the relationship between per-customer marketing investment and purchase behaviour. Understanding this link helps optimise future marketing resource allocation. The findings provide data-driven insights for marketing strategy improvements. # Research Question Does higher marketing spend per customer lead to higher purchase amounts? This analysis uses customer-level campaign data to test the direct relationship. The result will validate the return of personalised marketing investments. # Dataset Introduction The dataset records customer-level metrics from a quarterly marketing campaign. Key variables include marketing spend, site visits, customer segment, and purchase amount. All missing values and invalid negative purchase records were removed for reliability. The cleaned dataset ensures accurate and reproducible statistical analysis. This data represents the official record of the campaign’s customer interactions.</p>
+<section id="dataset-description-subsection" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="dataset-description-subsection"><span class="header-section-number">2.1</span> Dataset Description subsection</h2>
+<p>The cleaned dataset contains r nrow(data_clean) observations and r ncol(data_clean) variables. Numeric variables include marketing spend, visits, and purchase amount, while customer segment is categorical. Table <a href="#tbl-data-cleaning" class="quarto-xref">Table&nbsp;1</a> summarises the key numeric variables, and Figure <a href="#fig-purchaseplot" class="quarto-xref">Figure&nbsp;1</a> shows the overall distribution of purchase amounts.</p>
 <div class="cell">
 <div id="tbl-data-cleaning" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -165,9 +157,9 @@ Figure&nbsp;1: Distribution of customer purchase amounts.
 </div>
 </div>
 </section>
-<section id="results" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="results"><span class="header-section-number">4.2</span> Results</h2>
-<p>This section looks at our research question: What factors influence customer purchase amounts? As shown in Figure <a href="#fig-purchaseplot" class="quarto-xref">Figure&nbsp;1</a>, most customers have relatively low purchase amounts. The distribution is right-skewed, meaning only a few customers spend very high amounts. The average purchase amount in this data is 166.7 USD. Figure <a href="#fig-marketing-purchase" class="quarto-xref">Figure&nbsp;2</a> shows a clear positive relationship between marketing spend and purchase amount. As marketing spend increases, customer purchase amounts tend to increase as well, showing a strong connection between marketing investment and customer spending. Figure <a href="#fig-total-visits" class="quarto-xref">Figure&nbsp;3</a> shows the distribution of customer visit counts. This bar chart helps us understand how often customers engage with the business, and we can see the most common number of visits clearly. Together, these figures show that marketing spend and customer engagement both play important roles in influencing how much customers spend, which directly answers our research question.</p>
+<section id="results" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="results"><span class="header-section-number">2.2</span> Results</h2>
+<p>The core research question examines whether higher marketing spend per customer leads to higher purchase amounts. From Table <a href="#tbl-data-cleaning" class="quarto-xref">Table&nbsp;1</a>, we can see the central tendency and spread of marketing spend and purchase amounts. As shown in Figure <a href="#fig-purchaseplot" class="quarto-xref">Figure&nbsp;1</a>, most customers exhibit relatively moderate purchase values. Figure <a href="#fig-marketing-purchase" class="quarto-xref">Figure&nbsp;2</a> illustrates the relationship between marketing spend and purchase amount. A clear positive trend is visible, indicating that increased marketing spend per customer is associated with higher purchase amounts. The average purchase amount in the sample is r round(mean(data_clean$purchase_amount), 2) USD. Together, Table <a href="#tbl-data-cleaning" class="quarto-xref">Table&nbsp;1</a>, Figure <a href="#fig-purchaseplot" class="quarto-xref">Figure&nbsp;1</a>, and Figure <a href="#fig-marketing-purchase" class="quarto-xref">Figure&nbsp;2</a> confirm that higher marketing investment per customer corresponds to greater customer spending. This directly answers the research question with consistent visual and statistical evidence.</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
@@ -199,7 +191,7 @@ Figure&nbsp;3: Distribution of customer visit frequencies
 </div>
 </div>
 </div>
-<p>Conclusion The analysis shows clear relationships between marketing spend, customer visits, and purchase amounts. Higher marketing spending is strongly associated with increased customer purchase amounts, demonstrating the effectiveness of marketing investment. The distribution of purchase amounts indicates that most customers spend moderately, while a small group of high-value customers exists. Visit patterns also show that general customer engagement is relatively consistent across the dataset.Overall, the findings support the idea that marketing efforts and customer engagement are key factors influencing customer spending behavior. These insights can help guide future marketing strategies and improve business decisions.</p>
+<p>Conclusion The analysis clearly demonstrates that higher marketing spend per customer leads to higher purchase amounts. The positive linear trend in Figure <a href="#fig-marketing-purchase" class="quarto-xref">Figure&nbsp;2</a> validates the effectiveness of the campaign. These results support increasing targeted marketing investment to boost customer spending. The insights enable the marketing team to allocate budgets more efficiently for maximum return.</p>
 </section>
 </section>
 

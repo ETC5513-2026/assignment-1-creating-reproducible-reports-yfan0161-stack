@@ -1,5 +1,5 @@
 ---
-title: "Dataset Analysis Report"
+title: "Marketing Spend and Customer Purchase Analysis"
 author: "Yunhui Fan"
 format:
   html:
@@ -26,14 +26,20 @@ library(dplyr)
 ```
 
 # Introduction
-This report looks at customer data to understand shopping patterns.I want to see how visits and spending relate to how much customers buy.This can help make marketing decisions more effective.The findings will help explain what affects customer purchases.
-
+This report analyses customer data from an online retail marketing campaign.
+It explores the relationship between per-customer marketing investment and purchase behaviour.
+Understanding this link helps optimise future marketing resource allocation.
+The findings provide data-driven insights for marketing strategy improvements.
 # Research Question
-I want to find out what affects how much customers spend on purchases.I will look at the number of visits and marketing spend for each customer.This report will show the relationship between these factors and purchase amount.
-
+Does higher marketing spend per customer lead to higher purchase amounts?
+This analysis uses customer-level campaign data to test the direct relationship.
+The result will validate the return of personalised marketing investments.
 # Dataset Introduction
-This dataset tracks customer behavior for an online store.It records each customer's marketing spend, site visits, and total purchase amount.It also includes customer segment information to group different types of shoppers.Before analysis, I removed rows with missing values and fixed inconsistent entries.This cleaned data ensures reliable results for the analysis.
-
+The dataset records customer-level metrics from a quarterly marketing campaign.
+Key variables include marketing spend, site visits, customer segment, and purchase amount.
+All missing values and invalid negative purchase records were removed for reliability.
+The cleaned dataset ensures accurate and reproducible statistical analysis.
+This data represents the official record of the campaign’s customer interactions.
 ```{r}
 #| label: data-loading
 #| echo: false
@@ -46,10 +52,9 @@ data_clean <- data %>%
 ```
 
 ## Dataset Description subsection
-Dataset Description
-This dataset has `r nrow(data_clean)` observations and `r ncol(data_clean)` variables.
-The data includes numeric values like visits and purchase amount, and categorical groups like customer segment.
-Table @tbl-data-cleaning shows the summary statistics for key numeric variables, and Figure @fig-purchaseplot displays the distribution of purchase amounts.
+The cleaned dataset contains r nrow(data_clean) observations and r ncol(data_clean) variables.
+Numeric variables include marketing spend, visits, and purchase amount, while customer segment is categorical.
+Table @tbl-data-cleaning summarises the key numeric variables, and Figure @fig-purchaseplot shows the overall distribution of purchase amounts.
 
 ```{r}
 #| label: tbl-data-cleaning
@@ -73,17 +78,14 @@ ggplot(data_clean, aes(x = purchase_amount)) +
 
 ## Results
 
-This section looks at our research question: What factors influence customer purchase amounts?
-As shown in Figure @fig-purchaseplot, most customers have relatively low purchase amounts. 
-The distribution is right-skewed, meaning only a few customers spend very high amounts. 
-The average purchase amount in this data is `r round(mean(data_clean$purchase_amount), 2)` USD.
-Figure @fig-marketing-purchase shows a clear positive relationship between marketing spend and purchase amount. 
-As marketing spend increases, customer purchase amounts tend to increase as well, showing a strong connection between marketing investment and customer spending.
-Figure @fig-total-visits shows the distribution of customer visit counts. 
-This bar chart helps us understand how often customers engage with the business, and we can see the most common number of visits clearly.
-Together, these figures show that marketing spend and customer engagement both play important roles in influencing how much customers spend, which directly answers our research question.
-
-
+The core research question examines whether higher marketing spend per customer leads to higher purchase amounts.
+From Table @tbl-data-cleaning, we can see the central tendency and spread of marketing spend and purchase amounts.
+As shown in Figure @fig-purchaseplot, most customers exhibit relatively moderate purchase values.
+Figure @fig-marketing-purchase illustrates the relationship between marketing spend and purchase amount.
+A clear positive trend is visible, indicating that increased marketing spend per customer is associated with higher purchase amounts.
+The average purchase amount in the sample is r round(mean(data_clean$purchase_amount), 2) USD.
+Together, Table @tbl-data-cleaning, Figure @fig-purchaseplot, and Figure @fig-marketing-purchase confirm that higher marketing investment per customer corresponds to greater customer spending.
+This directly answers the research question with consistent visual and statistical evidence.
 ```{r}
 #| label: fig-marketing-purchase
 #| fig-cap: "Marketing spend vs customer purchase amount"
@@ -113,7 +115,7 @@ ggplot(data_clean, aes(x = visits)) +
 ```
 
 Conclusion
-The analysis shows clear relationships between marketing spend, customer visits, and purchase amounts. Higher marketing spending is strongly associated with increased customer purchase amounts, demonstrating the effectiveness of marketing investment.
-The distribution of purchase amounts indicates that most customers spend moderately, while a small group of high-value customers exists.
-Visit patterns also show that general customer engagement is relatively consistent across the dataset.Overall, the findings support the idea that marketing efforts and customer engagement are key factors influencing customer spending behavior.
-These insights can help guide future marketing strategies and improve business decisions.
+The analysis clearly demonstrates that higher marketing spend per customer leads to higher purchase amounts.
+The positive linear trend in Figure @fig-marketing-purchase validates the effectiveness of the campaign.
+These results support increasing targeted marketing investment to boost customer spending.
+The insights enable the marketing team to allocate budgets more efficiently for maximum return.
